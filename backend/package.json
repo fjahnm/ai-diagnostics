@@ -11,7 +11,7 @@
     "build": "tsc -p tsconfig.json",
     "start": "node dist/server.js",
     "test": "vitest run src/tests",
-    "test:integration": "vitest run src/tests/*.integration.ts",
+    "test:integration": "vitest run --config vitest.integration.config.ts",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "demo:seed": "tsx src/demo/seed.ts",
     "demo:evaluate": "tsx src/demo/evaluate.ts",
