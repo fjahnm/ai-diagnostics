@@ -6,8 +6,6 @@
 
 O AI Diagnostics coleta eventos operacionais, calcula métricas verificáveis e identifica padrões por regras determinísticas. Opcionalmente, um modelo de linguagem transforma as evidências em **hipóteses**, recomendações e limitações. O modelo não calcula os indicadores originais.
 
-> **Projeto de portfólio com execução local.** A demonstração utiliza dados completamente sintéticos e não precisa de sistemas, clientes ou infraestrutura empresarial.
-
 ## Funcionalidades
 
 - Aplicação completa com React, Node.js, TypeScript, Express, PostgreSQL e Docker.
