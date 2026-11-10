@@ -6,8 +6,6 @@
 
 AI Diagnostics collects operational events, computes verifiable metrics and detects patterns with deterministic rules. An optional large language model turns those observations into **hypotheses**, recommendations and limitations. The LLM does not calculate the underlying metrics.
 
-> **Portfolio project, local-first.** The included demonstration uses entirely synthetic data. No employer, customer, or production system is required.
-
 ## What it demonstrates
 
 - End-to-end product engineering with React, Node.js, TypeScript, Express, PostgreSQL and Docker.
