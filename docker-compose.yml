@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: ai-diagnostics-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ai_diagnostics
+      POSTGRES_USER: diagnostics
+      POSTGRES_PASSWORD: diagnostics_local_only
+    ports:
+      - "127.0.0.1:5434:5432"
+    volumes:
+      - diagnostics_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U diagnostics -d ai_diagnostics"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    shm_size: 64mb
+    mem_limit: 512m
+volumes:
+  diagnostics_pgdata:

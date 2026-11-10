@@ -1,0 +1,38 @@
+{
+  "name": "ai-diagnostics-api",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "test": "vitest run src/tests",
+    "test:integration": "vitest run src/tests/*.integration.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "demo:seed": "tsx src/demo/seed.ts",
+    "demo:evaluate": "tsx src/demo/evaluate.ts",
+    "db:setup": "tsx src/demo/setup-db.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "pg": "^8.13.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.13.5",
+    "@types/pg": "^8.11.11",
+    "@types/supertest": "^6.0.2",
+    "supertest": "^7.0.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vite": "6.4.5",
+    "vitest": "4.1.12"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "project_slug": "api-platform-demo",
+  "service_code": "payment-connector",
+  "events": [
+    {
+      "event_uid": "portfolio-example-001",
+      "observed_at": "2026-11-04T12:00:00Z",
+      "level": "ERROR",
+      "success": false,
+      "http_status": 429,
+      "duration_ms": 640,
+      "error_code": "RATE_LIMIT",
+      "message": "Limite de solicitacoes atingido (dado ficticio)"
+    }
+  ]
+}

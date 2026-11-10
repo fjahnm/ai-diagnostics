@@ -1,0 +1,17 @@
+{
+  "input": {
+    "assunto": "Atendimento gerado pelo chatbot",
+    "fkcodcli": 1385,
+    "telefone": "556984211958",
+    "protocolo": "26110685031",
+    "chat_usuario": "@chat.usuario"
+  },
+  "funcao": "abrir-atendimento",
+  "token_modo": "live",
+  "token_nome": "Consulta de Clientes",
+  "projeto_erp": "ANEXAR",
+  "erps_empresa": [
+    "ANEXAR"
+  ],
+  "token_prefixo": "hub_fe_live_fd3ad0..."
+}

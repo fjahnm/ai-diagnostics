@@ -1,0 +1,54 @@
+name: Quality checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: postgresql://diagnostics:diagnostics_local_only@127.0.0.1:5434/ai_diagnostics
+      INGEST_API_KEY: example-integration-secret-over-24-chars
+      LLM_PROVIDER: groq
+      GROQ_API_KEY: ''
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        working-directory: backend
+        run: npm install --no-audit --no-fund
+      - name: Start PostgreSQL
+        run: docker compose up -d --wait
+      - name: Unit tests
+        working-directory: backend
+        run: npm test
+      - name: API integration tests
+        working-directory: backend
+        run: npm run test:integration
+      - name: Seed reproducible demo
+        working-directory: backend
+        run: npm run demo:seed
+      - name: Evaluate reproducible demo
+        working-directory: backend
+        run: npm run demo:evaluate
+      - name: Build
+        working-directory: backend
+        run: npm run build
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        working-directory: frontend
+        run: npm install --no-audit --no-fund
+      - name: Build
+        working-directory: frontend
+        run: npm run build
