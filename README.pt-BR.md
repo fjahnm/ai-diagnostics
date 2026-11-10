@@ -111,3 +111,8 @@ Referência detalhada: [Guia técnico em português](docs/TECHNICAL_GUIDE.pt-BR.
 ## Autoria
 
 Projeto de portfólio em engenharia de software e IA aplicada. **Felipe Jahn Macedo** · [GitHub](https://github.com/fjahnm).
+
+## Artigo técnico
+
+- [AI Diagnostics: engenharia de diagnósticos de APIs com LLMs e evidências verificáveis](docs/articles/diagnosticos-ia-evidencias.pt-BR.md)
+- [Versão em inglês](docs/articles/evidence-based-ai-diagnostics.en.md)

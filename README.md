@@ -112,3 +112,8 @@ Additional implementation reference: [Detailed technical guide (Portuguese)](doc
 ## Authorship
 
 Developed as a software engineering and applied AI portfolio project. **Author: Felipe Jahn Macedo** · [GitHub](https://github.com/fjahnm).
+
+## Technical Article
+
+- [Evidence-Based AI Diagnostics: Architecture, Validation and Reproducible Evaluation](docs/articles/evidence-based-ai-diagnostics.en.md)
+- [Portuguese version](docs/articles/diagnosticos-ia-evidencias.pt-BR.md)
